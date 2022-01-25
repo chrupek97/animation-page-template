@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --light-green-color: #72d56f;
     --medium-green-color: #55c57a;
     --dark-green-color: #28b485;
@@ -23,11 +23,45 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-      #72d56fce, #28b485cb),
-       url("../img/main-image.jpg");
+    background-image: linear-gradient(to right bottom, #72d56fce, #28b485cb), url("../img/hero.jpg");
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%)
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.logo {
+    height: 2rem;
+}
+
+.heading-text__box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary__main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary__sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
 }
