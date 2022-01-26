@@ -40,3 +40,18 @@
         text-shadow: .5rem 1rem 2rem rgba($black-color, 0.5);
     }
 }
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
