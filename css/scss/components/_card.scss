@@ -6,7 +6,6 @@
     
     &__side {
         height: 50rem;
-        color: white;
         transition: all 1s ease;
         position: absolute;
         top: 0;
@@ -14,6 +13,7 @@
         width: 100%;
         backface-visibility: hidden;
         border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($black-color, .15);
 
         &--front {
@@ -44,7 +44,7 @@
                     to right bottom,
                     $tertiary-light-color,
                     $tertiary-dark-color
-                );;
+                );
             }
         }
     }
@@ -55,5 +55,97 @@
 
     &:hover &__side--back{
         transform: rotateY(0deg);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                $secondary-light-color,
+                $secondary-dark-color
+            ), url(../../../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $primary-light-color,
+                $primary-dark-color
+            ), url(../../../img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $tertiary-light-color,
+                $tertiary-dark-color
+            ), url(../../../img/nat-7.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $white-color;
+        position: absolute;
+        top: 12rem; 
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($secondary-light-color, .85),
+                rgba($secondary-dark-color, .85)
+            );
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($primary-light-color, .85),
+                rgba($primary-dark-color, .85)
+            );
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($tertiary-light-color, .85),
+                rgba($tertiary-dark-color, .85)
+            );
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $medium-gray-color;
+                }
+            }
+        }
     }
 }
