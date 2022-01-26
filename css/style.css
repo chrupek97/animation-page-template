@@ -147,6 +147,34 @@ body {
           animation: moveInRight 1s ease-in-out;
 }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: -webkit-gradient(linear, left top, right top, from(#72d56f), to(#28b485));
+  background-image: linear-gradient(to right, #72d56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(5deg) scale(1.1);
+          transform: skewY(2deg) skewX(5deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
@@ -207,6 +235,29 @@ body {
           animation: moveInTop .5s ease-in-out .75s backwards;
 }
 
+.row {
+  max-width: 110rem;
+  margin: 0 auto;
+  display: table;
+  clear: both;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 20rem;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 20rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 20rem) / 2);
+}
+
 .header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(114, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
@@ -235,5 +286,11 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin: -20vh 0;
 }
 /*# sourceMappingURL=style.css.map */
