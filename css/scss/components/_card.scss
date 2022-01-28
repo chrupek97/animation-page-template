@@ -3,7 +3,6 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 50rem;
-    
     &__side {
         height: 50rem;
         transition: all 1s ease;
@@ -15,48 +14,28 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($black-color, .15);
-
         &--front {
             background-color: $white-color;
         }
-
         &--back {
             transform: rotateY(180deg);
-
             &-1 {
-                background-image: linear-gradient(
-                    to right bottom,
-                    $secondary-light-color,
-                    $secondary-dark-color
-                );
+                background-image: linear-gradient( to right bottom, $secondary-light-color, $secondary-dark-color);
             }
-
             &-2 {
-                background-image: linear-gradient(
-                    to right bottom,
-                    $primary-light-color,
-                    $primary-dark-color
-                );
+                background-image: linear-gradient( to right bottom, $primary-light-color, $primary-dark-color);
             }
-
             &-3 {
-                background-image: linear-gradient(
-                    to right bottom,
-                    $tertiary-light-color,
-                    $tertiary-dark-color
-                );
+                background-image: linear-gradient( to right bottom, $tertiary-light-color, $tertiary-dark-color);
             }
         }
     }
-
-    &:hover &__side--front{
+    &:hover &__side--front {
         transform: rotateY(-180deg);
     }
-
-    &:hover &__side--back{
+    &:hover &__side--back {
         transform: rotateY(0deg);
     }
-
     &__picture {
         background-size: cover;
         height: 23rem;
@@ -64,32 +43,16 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-
         &--1 {
-            background-image: linear-gradient(
-                to right bottom,
-                $secondary-light-color,
-                $secondary-dark-color
-            ), url(../../../img/nat-5.jpg);
+            background-image: linear-gradient( to right bottom, $secondary-light-color, $secondary-dark-color), url(../../../img/nat-5.jpg);
         }
-
         &--2 {
-            background-image: linear-gradient(
-                to right bottom,
-                $primary-light-color,
-                $primary-dark-color
-            ), url(../../../img/nat-6.jpg);
+            background-image: linear-gradient( to right bottom, $primary-light-color, $primary-dark-color), url(../../../img/nat-6.jpg);
         }
-
         &--3 {
-            background-image: linear-gradient(
-                to right bottom,
-                $tertiary-light-color,
-                $tertiary-dark-color
-            ), url(../../../img/nat-7.jpg);
+            background-image: linear-gradient( to right bottom, $tertiary-light-color, $tertiary-dark-color), url(../../../img/nat-7.jpg);
         }
     }
-
     &__heading {
         font-size: 2.8rem;
         font-weight: 300;
@@ -97,60 +60,39 @@
         text-align: right;
         color: $white-color;
         position: absolute;
-        top: 12rem; 
+        top: 12rem;
         right: 2rem;
         width: 75%;
     }
-
     &__heading-span {
         padding: 1rem 1.5rem;
         box-decoration-break: clone;
-
         &--1 {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($secondary-light-color, .85),
-                rgba($secondary-dark-color, .85)
-            );
+            background-image: linear-gradient( to right bottom, rgba($secondary-light-color, .85), rgba($secondary-dark-color, .85));
         }
-
         &--2 {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($primary-light-color, .85),
-                rgba($primary-dark-color, .85)
-            );
+            background-image: linear-gradient( to right bottom, rgba($primary-light-color, .85), rgba($primary-dark-color, .85));
         }
-
         &--3 {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($tertiary-light-color, .85),
-                rgba($tertiary-dark-color, .85)
-            );
+            background-image: linear-gradient( to right bottom, rgba($tertiary-light-color, .85), rgba($tertiary-dark-color, .85));
         }
     }
-
     &__details {
         padding: 3rem;
-
         ul {
             list-style: none;
             width: 80%;
             margin: 0 auto;
-
-            li{
+            li {
                 text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
-
-                &:not(:last-child){
+                &:not(:last-child) {
                     border-bottom: 1px solid $medium-gray-color;
                 }
             }
         }
     }
-
     &__cta {
         position: absolute;
         top: 50%;
@@ -159,20 +101,58 @@
         width: 90%;
         text-align: center;
     }
-
     &__price-box {
         text-align: center;
         margin-bottom: 8rem;
         color: $white-color;
     }
-
     &__price-only {
         font-size: 1.4rem;
     }
-
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
         text-transform: uppercase;
+    }
+    @include respond(tab-port) {
+        height: auto;
+        border: 3px;
+        background-color: $white-color;
+
+        &__side {
+            height: auto;
+            transition: all 1s ease;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            text-align: center;
+            padding: 7rem 4rem 4rem 4rem; 
+        }
+        &__price-box {
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+        &__price-only {
+            font-size: 1.4rem;
+        }
+        &__price-value {
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
     }
 }
