@@ -37,4 +37,7 @@ To run this project, open index.html on your browser
 * Book section
 ![Header](design-images/card.png)
 
+* Popup section
+![Popup](design-images/popup.png)
+
 
